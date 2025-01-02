@@ -22,14 +22,16 @@ import kotlinx.coroutines.launch
 
 
 
-class GeminiViewModel: ViewModel() {
-//class GeminiViewModel(application: Application): AndroidViewModel(application) {
+//class GeminiViewModel: ViewModel() {
+//Vid 309
+class GeminiViewModel(application: Application): AndroidViewModel(application) {
 
-    /*private val db = Room.databaseBuilder(
+    //Vid 309, creamos la base de datos.
+    private val db = Room.databaseBuilder(
         application,
         AppDatabase::class.java,
         "chat_bot"
-    ).build()*/
+    ).build()
 
     private val generativeModel = GenerativeModel(
         modelName = "gemini-1.5-flash",
@@ -45,7 +47,7 @@ class GeminiViewModel: ViewModel() {
         mutableStateListOf<MessageModel>()
     }
 
-    //Vid 305
+    /*Vid 305
     fun sendMessage(question: String){
         viewModelScope.launch {
             try {
@@ -56,32 +58,18 @@ class GeminiViewModel: ViewModel() {
                 messageList.add(MessageModel("Error en la conversacion: ${e.message}", role = "model"))
             }
         }
-    }
+    }*/
 
-
-}
-
-
-/*
-
-
-    //    fun sendMessage(question: String){
-//        viewModelScope.launch {
-//            try {
-//                messageList.add(MessageModel(question, role = "user"))
-//                val response = chat.sendMessage(question)
-//                messageList.add(MessageModel(response.text.toString(), role = "model"))
-//            }catch (e:Exception){
-//                messageList.add(MessageModel("Error en la conversacion: ${e.message}", role = "model"))
-//            }
-//        }
-//    }
-    // ROOM
+    //Vid 309, ROOM
     fun sendMessage(question: String){
         viewModelScope.launch {
             try {
                 messageList.add(MessageModel(question, role = "user"))
-                val response = chat.sendMessage(question)
+                //Vid 311
+                val contextChat = messageList.joinToString (separator = "\n"){"${it.role}: ${it.message}"}
+                val response = chat.sendMessage(contextChat)
+
+                //val response = chat.sendMessage(question)
                 messageList.add(MessageModel(response.text.toString(), role = "model"))
                 // room
                 val chatDao = db.chatDao()
@@ -92,7 +80,7 @@ class GeminiViewModel: ViewModel() {
             }
         }
     }
-
+    //Vid 309
     fun loadChat(){
         try {
             viewModelScope.launch {
@@ -108,6 +96,7 @@ class GeminiViewModel: ViewModel() {
         }
     }
 
+    //Vid 310
     fun deleteChat(){
         viewModelScope.launch {
             try {
@@ -119,6 +108,19 @@ class GeminiViewModel: ViewModel() {
             }
         }
     }
+
+
+}
+
+
+/*
+
+
+
+
+
+
+
 
     //Enviar imagen a Gemini
 

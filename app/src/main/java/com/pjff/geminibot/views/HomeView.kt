@@ -42,7 +42,8 @@ fun HomeView(viewModel: GeminiViewModel) {
                 title = { Title() },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = backColor
-                )/*,
+                ),
+                //Vid 310
                 actions = {
                     IconButton(onClick = { viewModel.deleteChat() }) {
                         Icon(
@@ -53,7 +54,7 @@ fun HomeView(viewModel: GeminiViewModel) {
                     }
 
 
-                }*/
+                }
             )
         }
     ) { pad ->
@@ -96,9 +97,10 @@ fun HomeView(viewModel: GeminiViewModel) {
 //Vid 306
 @Composable
 fun ChatContent(modifier: Modifier, viewModel: GeminiViewModel) {
-    /*LaunchedEffect(Unit) {
+    //Vid 309
+    LaunchedEffect(Unit) {
         viewModel.loadChat()
-    }*/
+    }
     LazyColumn(
         modifier = modifier,
         reverseLayout = true

@@ -6,7 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.pjff.geminibot.model.ChatModel
 
-
+//Vid 308
 @Dao
 interface ChatDao {
     @Query("SELECT * FROM chatbot ORDER BY  id ASC")
