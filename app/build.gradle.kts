@@ -69,6 +69,7 @@ dependencies {
     //Vid 308
     //ksp("androidx.room:room-compiler:2.6.1")
     ksp(libs.androidx.room.compiler)
+    //Vid 313
     implementation("androidx.compose.material:material-icons-core:1.7.4")
     implementation("androidx.compose.material:material-icons-extended:1.7.4")
     implementation("io.coil-kt:coil-compose:2.3.0")

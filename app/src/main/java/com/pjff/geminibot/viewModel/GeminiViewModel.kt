@@ -110,23 +110,12 @@ class GeminiViewModel(application: Application): AndroidViewModel(application) {
     }
 
 
-}
-
-
-/*
-
-
-
-
-
-
-
-
-    //Enviar imagen a Gemini
+    //Vid 318,Enviar imagen a Gemini
 
     var descriptionResponse by mutableStateOf("")
         private set
 
+    //Vid 319
     var image by mutableStateOf<Uri>(Uri.EMPTY)
 
     fun descriptionImage(bitmap: Bitmap){
@@ -144,14 +133,13 @@ class GeminiViewModel(application: Application): AndroidViewModel(application) {
             }
         }
     }
-
+    //Vid 319
     fun cleanVars(){
         descriptionResponse = ""
         image = Uri.EMPTY
     }
+}
 
-
-}*/
 
 
 

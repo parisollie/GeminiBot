@@ -65,29 +65,26 @@ fun HomeView(viewModel: GeminiViewModel) {
                 .padding(pad)
                 .background(backColor)
         ) {
-            //Vid 306
-            ChatContent(modifier = Modifier.weight(1f), viewModel)
-            //Vid 304
-            MessageInput {
-                viewModel.sendMessage(it)
-            }
-
-            /*var showModal by remember {
+            //Vid 315
+            var showModal by remember {
                 mutableStateOf(false)
             }
-
+            //Vid 306
+            ChatContent(modifier = Modifier.weight(1f), viewModel)
             Row(verticalAlignment = Alignment.CenterVertically) {
                 IconButton(onClick = { showModal = true}) {
                     Icon(imageVector = Icons.Filled.Camera, contentDescription = "Camera")
                 }
+                //Vid 304
                 MessageInput {
                     viewModel.sendMessage(it)
                 }
             }
-            ModalView(viewModel, showModal) {
+            ModalView(viewModel,showModal) {
+                //Vid 319
                 viewModel.cleanVars()
                 showModal = false
-            }*/
+            }
 
 
         }

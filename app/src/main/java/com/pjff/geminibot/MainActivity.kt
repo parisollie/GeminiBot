@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.pjff.geminibot.ui.theme.GeminiBotTheme
 import com.pjff.geminibot.viewModel.GeminiViewModel
 import com.pjff.geminibot.views.HomeView
+import com.pjff.geminibot.views.ModalView
 
 
 class MainActivity : ComponentActivity() {
@@ -24,6 +25,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             GeminiBotTheme {
                 HomeView(viewModel)
+                //ModalView()
             }
         }
     }
