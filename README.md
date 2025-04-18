@@ -10,8 +10,6 @@ This application contains the following knowledge:
 
 -Design
 
--Save and read files in Json and XML format
-
 -Adapter
 
 -Model
