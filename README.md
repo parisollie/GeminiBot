@@ -14,8 +14,6 @@ This application contains the following knowledge:
 
 -Model
 
--Repository
-
 -ViewModel
 
 -MVVM
@@ -23,6 +21,8 @@ This application contains the following knowledge:
 -Compose
 
 -Room
+
+-Coomponents
 
 ### The application looks like this:
 
