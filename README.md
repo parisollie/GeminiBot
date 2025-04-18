@@ -22,12 +22,6 @@ This application contains the following knowledge:
 
 -MVVM
 
--Adapter
-
--Firebase
-
--Storage
-
 -Compose
 
 -Room
