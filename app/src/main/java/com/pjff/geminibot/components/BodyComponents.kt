@@ -28,7 +28,7 @@ import com.pjff.geminibot.model.MessageModel
 import com.pjff.geminibot.ui.theme.focusColor
 import com.pjff.geminibot.ui.theme.unfocusedColor
 
-//Vid 302
+//Vid 302,ACTUALIZADO
 @Composable
 fun MessageInput(onClick: (String) -> Unit) {
     var message by remember {
